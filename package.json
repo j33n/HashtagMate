@@ -2,10 +2,10 @@
   "name": "hashtagmate",
   "version": "1.0.0",
   "description": "An app to mess with twitter hashtags",
-  "main": "src/index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/index.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/JeanAbayo/HashtagMate#readme",
   "dependencies": {
+    "express": "^4.16.2",
     "twit": "^2.2.9"
   }
 }
