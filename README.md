@@ -1,6 +1,6 @@
 # HashTagMate
 
-![HashTagMate logo](https://image.ibb.co/f5OUGb/Logomakr_2_K48_OH.png)
+<img src="https://image.ibb.co/f5OUGb/Logomakr_2_K48_OH.png" width="200" alt="HashTagMate"/>
 
 ## About HashTagMate
 
