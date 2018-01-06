@@ -1,0 +1,27 @@
+{
+  "name": "hashtagmate",
+  "version": "1.0.0",
+  "description": "An app to mess with twitter hashtags",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JeanAbayo/HashtagMate.git"
+  },
+  "keywords": [
+    "Twitter",
+    "Bot",
+    "Hashtag",
+    "Retweet",
+    "Tweets",
+    "Social"
+  ],
+  "author": "Jean Abayo ft Muhozi Emery",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JeanAbayo/HashtagMate/issues"
+  },
+  "homepage": "https://github.com/JeanAbayo/HashtagMate#readme"
+}
