@@ -20,7 +20,7 @@ npm start
 Use this url to create a Twitter app:
 [https://apps.twitter.com/app/new](https://apps.twitter.com/app/new)
 
-Replace the **::** in *config.example.js* with *Consumer Key, Consumer Secret, Access Token, Access Token Secret* Provided by twitter and rename it to *config.js*
+Replace the **::** in *config.example.js* with *Consumer Key, Consumer Secret, Access Token, Access Token Secret* Provided by  and rename it to *config.js*
 
 ```
 module.exports = {
@@ -30,3 +30,9 @@ module.exports = {
 	access_token_secret: '::'
 } 
 ```
+
+## Endpoints
+
+Resource URL | Methods | Description | Requires Token 
+--- | --- | --- | --- 
+/hashtag/:hashtag | GET | Pass a hashtag as a parameter to fetch it's tweets | TRUE
