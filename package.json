@@ -11,7 +11,14 @@
     "type": "git",
     "url": "git+https://github.com/JeanAbayo/HashtagMate.git"
   },
-  "keywords": ["Twitter", "Bot", "Hashtag", "Retweet", "Tweets", "Social"],
+  "keywords": [
+    "Twitter",
+    "Bot",
+    "Hashtag",
+    "Retweet",
+    "Tweets",
+    "Social"
+  ],
   "author": "Jean Abayo ft Muhozi Emery",
   "license": "MIT",
   "bugs": {
