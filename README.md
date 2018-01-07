@@ -7,20 +7,20 @@
 **HashTagMate** is an app that is meant to sort tweets based on hashtags and has the ability to retweet them.
 
 ### Setup HashTagMate
+
 Ensure you have [**Node**](https://nodejs.org/en/download/) and [**Git**](https://git-scm.com/downloads) installed.
 
 ```
 git clone https://github.com/JeanAbayo/HashtagMate
 cd HashtagMate
 npm install
-npm start
-
+npm run dev
 ```
 
 Use this url to create a Twitter app:
 [https://apps.twitter.com/app/new](https://apps.twitter.com/app/new)
 
-Replace the **::** in *config.example.js* with *Consumer Key, Consumer Secret, Access Token, Access Token Secret* Provided by  and rename it to *config.js*
+Replace the **::** in _config.example.js_ with _Consumer Key, Consumer Secret, Access Token, Access Token Secret_ Provided by and rename it to _config.js_
 
 ```
 module.exports = {
@@ -28,11 +28,14 @@ module.exports = {
 	consumer_secret: '::',
 	access_token: '::',
 	access_token_secret: '::'
-} 
+}
 ```
+
+Access the server at: `http://localhost:8081/`
 
 ## Endpoints
 
-Resource URL | Methods | Description | Requires Token 
---- | --- | --- | --- 
-/hashtag/:hashtag | GET | Pass a hashtag as a parameter to fetch it's tweets | TRUE
+| Resource URL      | Methods | Description                                        | Requires Token |
+| ----------------- | ------- | -------------------------------------------------- | -------------- |
+| /hashtag | GET     | Pass a hashtag as a parameter to fetch it's tweets | TRUE           |
+/hashtag/:hashtag | GET | Pass a hashtag as a parameter to fetch it's tweets(Through URL) | TRUE
