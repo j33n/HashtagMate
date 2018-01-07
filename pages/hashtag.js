@@ -45,7 +45,7 @@ export default class Hashtag extends React.Component {
   }
 }
 Hashtag.getInitialProps = async function() {
-  const res = await fetch("http://localhost:8081/hashtag/Rwot");
+  const res = await fetch("https://hashtagmate.herokuapp.com/hashtag/Rwot");
   const tweets = await res.json();
   return {
     tweets: tweets
