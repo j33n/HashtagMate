@@ -33,10 +33,10 @@ export default () => {
         </Grid>
       </Container>
       <Menu>
-        <Link href={{ pathname: "/hashtag", query: { name: "Rwot" } }}>
+        <Link href={{ pathname: "/hashtag", query: { ht: "Rwot" } }}>
           <Menu.Item name="Rwot">#Rwot</Menu.Item>
         </Link>
-        <Link href={{ pathname: "/hashtag", query: { name: "Rwanda" } }}>
+        <Link href={{ pathname: "/hashtag", query: { ht: "Rwanda" } }}>
           <Menu.Item name="Rwot">#ThousandHills</Menu.Item>
         </Link>
       </Menu>
