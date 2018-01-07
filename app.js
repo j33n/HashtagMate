@@ -1,14 +1,14 @@
 var express = require("express");
-	// app = express();
-const next = require('next');
-const { parse } = require('url');
+// app = express();
+const next = require("next");
+const { parse } = require("url");
 
-const dev = process.env.NODE_ENV !== 'production';
+const dev = process.env.NODE_ENV !== "production";
 const PORT = process.env.PORT || 3000;
 
-const app = next({dir: '.', dev });
+const app = next({ dir: ".", dev });
 const handle = app.getRequestHandler();
-const getRoutes = require('./routes');
+const getRoutes = require("./routes");
 
 const routes = getRoutes();
 
@@ -17,54 +17,54 @@ var twit = require("twit");
 var config = require("./config.js");
 var Twitter = new twit(config);
 
-
-
 app.prepare().then(() => {
-  const server = express();
-  server.use(require("./controllers/routes"));
-  server.get('*', (req, res) => {
-    const parsedUrl = parse(req.url, true);
-    const { pathname, query = {} } = parsedUrl;
-    const route = routes[pathname];
-    if (route) {
-      return app.render(req, res, route.page, route.query);
-    }
-    return handle(req, res);
-  });
-var retweet = function() {
-	var params = {
-		q: "#Funny",
-		result_type: "recent",
-		lang: "en"
-	};
-
-	Twitter.get("search/tweets", params, function(err, data) {
-		// If there are no errors
-		if (!err) {
-			// Get a tweet ID to retweet
-			var retweetId = data.statuses[0].id_str;
-
-			// Tell twitter to retweet
-			Twitter.post(
-				"statuses/retweet/:id",
-				{
-					id: retweetId
-				},
-				function(err, response) {
-					if (response) {
-						console.log("Retweeted !!!!!!");
-					}
-					// If the retweet had an error
-					if (err) {
-						console.log("Something went wrong while retweeting");
-					}
-				}
-			);
-		} else {
-			// If we are unable to search for the tweet
-			console.log("Something went wrong with the search");
+	const server = express();
+	server.use(require("./controllers/routes"));
+	server.get("*", (req, res) => {
+		const parsedUrl = parse(req.url, true);
+		const { pathname, query = {} } = parsedUrl;
+		const route = routes[pathname];
+		if (route) {
+			return app.render(req, res, route.page, route.query);
 		}
+		return handle(req, res);
 	});
+	var retweet = function() {
+		var params = {
+			q: "#Rwot",
+			result_type: "recent",
+			lang: "en"
+		};
+
+		Twitter.get("search/tweets", params, function(err, data) {
+			// If there are no errors
+			if (!err) {
+				// Get a tweet ID to retweet
+				var retweetId = data.statuses[0].id_str;
+
+				// Tell twitter to retweet
+				Twitter.post(
+					"statuses/retweet/:id",
+					{
+						id: retweetId
+					},
+					function(err, response) {
+						if (response) {
+							console.log("Retweeted !!!!!!");
+						}
+						// If the retweet had an error
+						if (err) {
+							console.log(
+								"Something went wrong while retweeting"
+							);
+						}
+					}
+				);
+			} else {
+				// If we are unable to search for the tweet
+				console.log("Something went wrong with the search");
+			}
+		});
 	};
 	// Once our program runs we should retweet
 	retweet();
@@ -106,16 +106,16 @@ var retweet = function() {
 	};
 	// grab & 'favorite' as soon as program is running...
 	favoriteTweet();
-	// 'favorite' a tweet in every  minutes
+	// 'favorite' a tweet in every 5 minutes
 	setInterval(favoriteTweet, 600000);
 
-	// function to generate a random tweet tweet
+	// function to generate a random tweet
 	function ranDom(arr) {
 		var index = Math.floor(Math.random() * arr.length);
 		return arr[index];
 	}
-  server.listen(PORT, (err) => {
-    if (err) throw err;
-    console.log(`> Ready on http://localhost:${PORT}`);
-  });
+	server.listen(PORT, err => {
+		if (err) throw err;
+		console.log(`> Ready on http://localhost:${PORT}`);
+	});
 });
