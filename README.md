@@ -2,6 +2,13 @@
 
 <img src="https://image.ibb.co/f5OUGb/Logomakr_2_K48_OH.png" width="200" alt="HashTagMate"/>
 
+## Accessibility
+
+* You can access our frontend that consumes an Express API using ReactJS and NextJS at [HashTagMate](https://hashtagmate.herokuapp.com)
+
+* You can follow HashTagMate twitter activities at [ImRwanda](https://twitter.com/ImRwanda) 
+
+
 ## About HashTagMate
 
 **HashTagMate** is an app that is meant to sort tweets based on hashtags and has the ability to retweet them.
@@ -20,7 +27,9 @@ npm run dev
 Use this url to create a Twitter app:
 [https://apps.twitter.com/app/new](https://apps.twitter.com/app/new)
 
-Replace the **::** in _config.example.js_ with _Consumer Key, Consumer Secret, Access Token, Access Token Secret_ Provided by and rename it to _config.js_
+Replace the **::** in _config.js_ with _Consumer Key, Consumer Secret, Access Token, Access Token Secret_ Provided by and rename it to _config.js_
+
+**Note:** You can use our config if needed. The app twitter account is just for this open source project ✌️. 
 
 ```
 module.exports = {
@@ -31,7 +40,7 @@ module.exports = {
 }
 ```
 
-Access the server at: `http://localhost:8081/`
+Access the server at: `http://localhost:3000/`
 
 ## Endpoints
 
