@@ -2,6 +2,12 @@
 
 <img src="https://image.ibb.co/f5OUGb/Logomakr_2_K48_OH.png" width="200" alt="HashTagMate"/>
 
+# Demo
+[https://hashtagmate.herokuapp.com](https://hashtagmate.herokuapp.com)
+
+# Preview
+![Screen Shot 2022-10-27 at 00 11 47](https://user-images.githubusercontent.com/19430799/198148358-67aaca08-f57e-4599-a3b0-14b25f94db84.png)
+
 ## Accessibility
 
 * You can access our frontend that consumes an Express API using ReactJS and NextJS at [HashTagMate](https://hashtagmate.herokuapp.com)
